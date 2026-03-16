@@ -1,0 +1,18 @@
+﻿@model Lab3.Models.Rsvp
+
+<h2>Confirmation</h2>
+
+@if (ViewData["Message"] != null)
+{
+    <div class="alert alert-success">
+        @ViewData["Message"]
+    </div>
+}
+
+<div>
+    <p><strong>Name:</strong> @Model.FullName</p>
+    <p><strong>Workshop:</strong> @Model.WorkshopTitle</p>
+    <p><strong>Accommodation Required:</strong> @(Model.NeedsAccommodation ? "Yes" : "No")</p>
+</div>
+
+<a asp-action="Registrations" class="btn btn-info">See All Registrants</a>

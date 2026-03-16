@@ -1,0 +1,46 @@
+﻿@model Lab3.Models.Rsvp
+
+<h2>Register for a Workshop</h2>
+
+<form asp-action="Register" method="post">
+    <div class="form-group mb-3">
+        <label asp-for="FullName">Full Name</label>
+        <input asp-for="FullName" class="form-control" required />
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" class="form-control" type="email" required />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Phone">Phone</label>
+        <input asp-for="Phone" class="form-control" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="WorkshopTitle">Workshop Title</label>
+        <select asp-for="WorkshopTitle" class="form-control">
+            <option value="">-- Select a Workshop --</option>
+            <option value="Routing Basics">Routing Basics</option>
+            <option value="EF Core Intro">EF Core Intro</option>
+            <option value="Razor Essentials">Razor Essentials</option>
+        </select>
+        <span asp-validation-for="WorkshopTitle" class="text-danger"></span>
+    </div>
+
+    <div class="form-check mb-3">
+        <input asp-for="NeedsAccommodation" class="form-check-input" />
+        <label asp-for="NeedsAccommodation" class="form-check-label">Do you need special accommodations?</label>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit RSVP</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
