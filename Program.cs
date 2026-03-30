@@ -1,6 +1,6 @@
 using Lab3.Data;
 using Microsoft.EntityFrameworkCore;
-using Lab3.Data; // Add this using statement
+using Lab3.Data; 
 
 
 namespace Lab3
@@ -32,11 +32,11 @@ namespace Lab3
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
+                app.UseHsts(); //Forces HTTPS on Azure
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseStaticFiles(); //CSS/JSON/IMG
             app.UseRouting();
             app.UseAuthorization();
 

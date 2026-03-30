@@ -41,10 +41,10 @@ namespace Lab3.Data
 
             foreach (var rsvp in rsvps)
             {
-                context.Rsvps.Add(rsvp);
+                context.Rsvps.Add(rsvp); //adding to EF Core's "tracking list"
             }
 
-            context.SaveChanges();
+            context.SaveChanges(); //database 
         }
     }
 }

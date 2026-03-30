@@ -9,8 +9,10 @@ namespace Lab3.Controllers
 {
     public class WorkshopsController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        
+        private readonly ApplicationDbContext _context; //hold the database connection
 
+        //Dependency Injection (ASP.NET )
         public WorkshopsController(ApplicationDbContext context)
         {
             _context = context;
@@ -18,22 +20,22 @@ namespace Lab3.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(); //loads the homepage of the Workshops section
         }
 
         // GET: Display the registration form
         [HttpGet]
         public IActionResult Register()
         {
-            return View();
+            return View(); //register page
         }
 
         // POST: Process the registration form
-        [HttpPost]
+        [HttpPost] //form submissions
         [ValidateAntiForgeryToken]
         public IActionResult Register(Rsvp rsvp)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) //checks model rules 
             {
                 // For Lab 4, we're NOT saving to database
                 return RedirectToAction("Confirmation", rsvp);

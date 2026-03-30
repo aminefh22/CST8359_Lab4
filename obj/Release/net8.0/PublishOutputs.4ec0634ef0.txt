@@ -1,7 +1,0 @@
-C:\Users\amine\source\repos\Lab3\publish\Lab3.exe
-C:\Users\amine\source\repos\Lab3\publish\appsettings.Development.json
-C:\Users\amine\source\repos\Lab3\publish\appsettings.json
-C:\Users\amine\source\repos\Lab3\publish\Lab3.dll
-C:\Users\amine\source\repos\Lab3\publish\Lab3.deps.json
-C:\Users\amine\source\repos\Lab3\publish\Lab3.runtimeconfig.json
-C:\Users\amine\source\repos\Lab3\publish\Lab3.pdb
